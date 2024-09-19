@@ -1,6 +1,5 @@
-// components/Card.js
  
-
+ 
 const Card = ({ user }) => {
   return (
     <div className="card">

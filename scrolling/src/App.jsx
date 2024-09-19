@@ -26,7 +26,7 @@ function App() {
   }, [page]);
 
 
-  // Infinite scrolling using Intersection Observer
+ 
   const lastUserElementRef = (node) => {
     if (loading) return;
     if (observer.current) observer.current.disconnect();
