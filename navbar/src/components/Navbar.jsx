@@ -19,7 +19,7 @@ import {
     DrawerContent,
     DrawerCloseButton,
   } from '@chakra-ui/react';
-  import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons';
+  import {  HamburgerIcon } from '@chakra-ui/icons';
   import React from 'react';
   
   const Navbar = () => {
@@ -27,14 +27,14 @@ import {
     const btnRef = React.useRef();
   
     return (
-      <Box bg="gray.800" color="white" px={8}>
+      <Box bg=" #C4FF4D" color="#FF1919" px={8}>
         <Flex h={16} alignItems="center" justifyContent="space-between">
-          {/* Logo */}
+         
           <Text fontSize="xl" fontWeight="bold">
           𝐀ᑲɦ𝗂𝗃𝖾𝖾𝗍 𝐒ɦυ𝗄ᥣα
           </Text>
   
-          {/* Full-screen navigation (hidden on small screens) */}
+           
           <Flex alignItems="center" display={{ base: 'none', md: 'flex' }}>
             <Link href="#" mx={4}>
             𝐇ⱺꭑ𝖾
@@ -43,13 +43,14 @@ import {
             𝐀ᑲⱺυ𝗍
             </Link>
   
-            {/* Mega Menu */}
+            
             <Menu>
               <MenuButton
                 as={Button}
-                rightIcon={<ChevronDownIcon />}
-                bg="gray.800"
-                _hover={{ bg: 'gray.700' }}
+               
+                color={"#E60000"}
+                bg=" #C4FF4D"
+                _hover={{ bg: '#C4FF4D' }}
               >
                 𝐒𝖾𝗋𝗏𝗂𝖼𝖾𝗌
               </MenuButton>
@@ -85,7 +86,7 @@ import {
             </Link>
           </Flex>
   
-          {/* Hamburger Menu for small screens */}
+        
           <IconButton
             ref={btnRef}
             icon={<HamburgerIcon />}
@@ -95,7 +96,7 @@ import {
             display={{ base: 'flex', md: 'none' }}
           />
   
-          {/* Drawer for small screens */}
+         
           <Drawer
             isOpen={isOpen}
             placement="right"
@@ -105,25 +106,21 @@ import {
             <DrawerOverlay />
             <DrawerContent>
               <DrawerCloseButton />
-              <DrawerHeader>Menu</DrawerHeader>
+              <DrawerHeader textAlign={'center'} fontSize={20}>Menu</DrawerHeader>
   
-              <DrawerBody>
-                {/* Drawer content (same as the right-side nav links and mega menu) */}
-                <Link href="#" display="block" py={2}>
+              <DrawerBody textAlign={'center'} fontSize={22}>
+               
+                <Link href="#" display="block" py={3}>
                 𝐇ⱺꭑ𝖾
                 </Link>
-                <Link href="#" display="block" py={2}>
-                𝐀ᑲⱺυ𝗍
-                </Link>
-  
-                {/* Services - Mega Menu */}
-                <Menu>
+
+                  <Menu>
                   <MenuButton
                     as={Button}
-                    rightIcon={<ChevronDownIcon />}
-                    w="100%"
-                    bg="gray.100"
-                    mb={4}
+                  
+                   bg={'white'}
+                    _hover={{bg:'white'}}
+                    fontSize={20}
                   >
                      𝐒𝖾𝗋𝗏𝗂𝖼𝖾𝗌
                   </MenuButton>
@@ -142,15 +139,16 @@ import {
                         <MenuItem>Graphic Design</MenuItem>
                       </MenuGroup>
                     </Box>
-                    <Box p={4}>
-                      <MenuGroup title="Marketing">
-                        <MenuItem>SEO</MenuItem>
-                        <MenuItem>Content Marketing</MenuItem>
-                        <MenuItem>Social Media</MenuItem>
-                      </MenuGroup>
-                    </Box>
+                     
                   </MenuList>
                 </Menu>
+
+                <Link href="#" display="block" py={2}>
+                𝐀ᑲⱺυ𝗍
+                </Link>
+  
+              
+                 
   
                 <Link href="#" display="block" py={2}>
                 𝐂ⱺ𐓣𝗍α𝖼𝗍
